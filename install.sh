@@ -47,15 +47,15 @@ function run_install {
     pip3 --version
 
     # Install miscellaneous packages
-    apt install -y htop git
+    apt install -y htop git nano mc
+    apt install -y libssl-dev
 
     # Clean apt
     apt autoremove -y
     apt clean -y
 
     # Remove tracks
-    rm /root/.bash_history || true
-    rm /home/student/.bash_history || true
+    rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
 }
 
