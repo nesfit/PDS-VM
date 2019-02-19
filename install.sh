@@ -49,6 +49,10 @@ function run_install {
     # Install miscellaneous packages
     apt install -y htop git
 
+    # Clean apt
+    apt autoremove -y
+    apt clean -y
+
     # Remove tracks
     rm /root/.bash_history || true
     rm /home/student/.bash_history || true
