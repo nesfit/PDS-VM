@@ -2,7 +2,7 @@ VirtualBox: 5.2.26
 
 OS: ubuntu-18.04.1-desktop-amd64; minimal install; student/student
 
-Installed software:
+Installed core software:
 
 *	OpenJDK11
 *	Dotnet SDK 2.2
