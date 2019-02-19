@@ -47,7 +47,7 @@ function run_install {
     pip3 --version
 
     # Install miscellaneous packages
-    apt install -y htop git nano mc
+    apt install -y htop git nano mc zerofree
     apt install -y libssl-dev
 
     # Clean apt
@@ -57,6 +57,8 @@ function run_install {
     # Remove tracks
     rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
+
+    echo 'Installation completed'
 }
 
 
