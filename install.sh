@@ -3,6 +3,8 @@
 set -x
 set -e
 
+cd /tmp
+
 apt update
 apt upgrade -y
 

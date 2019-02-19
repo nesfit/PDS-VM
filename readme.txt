@@ -1,5 +1,5 @@
 VirtualBox: 5.2.26
-Ubuntu: ubuntu-18.04.1-desktop-amd64; minimal install; student/student
+OS: ubuntu-18.04.1-desktop-amd64; minimal install; student/student
 
 Software:
 	OpenJDK11
