@@ -7,7 +7,7 @@ VM export TODO list:
 	3. Reboot to recovery mode
 	4. `zerofree -v /dev/sda1`
 	5. `mount -o remount, rw /`
-	6. Edit `/etc/fstab` to remove `ro` parameter of the root parition
+	6. Edit `/etc/fstab` to remove `ro` parameter of the root partition
 	7. `halt`
 3. Take snapshot
 4. Export appliance  
