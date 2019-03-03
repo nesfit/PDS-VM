@@ -21,7 +21,7 @@ function run_install {
     # Install OpenJDK 11
     add-apt-repository -y ppa:openjdk-r/ppa
     apt update -q
-    apt install -y openjdk-11-jdk
+    apt install -y openjdk-11-jdk ant
 
     # Install Dotnet SDK 2.2
     wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
