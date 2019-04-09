@@ -16,7 +16,7 @@ function run_install {
     set -e
 
     apt update
-    apt upgrade -y
+    #apt upgrade -y
 
     # Install OpenJDK 11
     add-apt-repository -y ppa:openjdk-r/ppa
@@ -48,7 +48,7 @@ function run_install {
 
     # Install miscellaneous packages
     apt install -y htop git nano mc zerofree
-    apt install -y libssl-dev
+    apt install -y libssl-dev libpcap-dev
 
     # Clean apt
     apt autoremove -y
