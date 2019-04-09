@@ -54,6 +54,9 @@ function run_install {
     apt autoremove -y
     apt clean -y
 
+    # Setup keyboard input sources
+    gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'cz'), ('xkb', 'us')]"
+
     # Remove tracks
     rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
