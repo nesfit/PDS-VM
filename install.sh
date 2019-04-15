@@ -47,8 +47,8 @@ function run_install {
     pip3 --version
 
     # Install miscellaneous packages
-    apt install -y htop git nano mc zerofree
-    apt install -y libssl-dev libpcap-dev
+    apt install -y htop git nano mc zerofree cmake
+    apt install -y libssl-dev libpcap-dev libboost-dev
 
     # Clean apt
     apt autoremove -y
