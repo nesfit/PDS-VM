@@ -21,7 +21,7 @@ function run_install {
     # Install OpenJDK 11
     add-apt-repository -y ppa:openjdk-r/ppa
     apt update -q
-    apt install -y openjdk-11-jdk ant
+    apt install -y openjdk-11-jdk ant maven
 
     # Install Dotnet SDK 2.2
     wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -33,7 +33,8 @@ function run_install {
     appendLine 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
 
     # Install GCC/G++
-    apt install -y gcc g++ build-essential
+    apt install -y gcc g++ build-essential \
+                   libssl-dev libpcap-dev libboost-dev
 
     # Install Python
     apt install -y python3.6 python3-pip
@@ -48,8 +49,7 @@ function run_install {
 
     # Install miscellaneous packages
     apt install -y htop git nano mc zerofree cmake
-    apt install -y libssl-dev libpcap-dev libboost-dev
-
+    
     # Clean apt
     apt autoremove -y
     apt clean -y
