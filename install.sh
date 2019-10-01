@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function appendLine {
+function append_line {
     FILENAME="$1"
     LINE="$2"
     if [ -e "$FILENAME" ]
@@ -16,27 +16,27 @@ function run_install {
     set -e
 
     apt update
-    #apt upgrade -y
+    apt upgrade -y
 
     # Install OpenJDK 11
     add-apt-repository -y ppa:openjdk-r/ppa
     apt update -q
     apt install -y openjdk-11-jdk ant maven
 
-    # Install Dotnet SDK 2.2
+    # Install Dotnet SDK 3.0
     wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
     dpkg -i packages-microsoft-prod.deb
     add-apt-repository -y universe
     apt install -y apt-transport-https 
     apt update
-    apt install -y dotnet-sdk-2.2
-    appendLine 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
+    apt install -y dotnet-sdk-3.0
+    append_line 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
 
     # Install GCC/G++
     apt install -y gcc g++ build-essential \
                    libssl-dev libpcap-dev libboost-dev
 
-    # Install Python
+    # Install Python3
     apt install -y python3.6 python3-pip
 
     # Check installed core packages
@@ -49,7 +49,7 @@ function run_install {
 
     # Install miscellaneous packages
     apt install -y htop git nano mc zerofree cmake
-    
+
     # Clean apt
     apt autoremove -y
     apt clean -y
@@ -61,7 +61,7 @@ function run_install {
     rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
 
-    echo 'Installation completed'
+    echo 'Installation successfully completed'
 }
 
 
