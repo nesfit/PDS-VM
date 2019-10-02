@@ -1,15 +1,14 @@
 VirtualBox: 5.2.26
 
-OS: ubuntu-18.04.1-desktop-amd64; minimal install; student/student
+OS: ubuntu-18.04.3-desktop-amd64; minimal install; student/student
 
 Installed core software:
 
 *	OpenJDK11
-*	Dotnet SDK 2.2
+*	Dotnet SDK 3.0
 *	gcc 7.3.0, g++ 7.3.0
 *	Python 3.6.7, Pip3 
 *	git 2.17.1
-*	VS Code
 
 
 Possible problems with solutions:
