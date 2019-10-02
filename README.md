@@ -1,4 +1,4 @@
-VirtualBox: 5.2.26
+VirtualBox: 6.0.12
 
 OS: ubuntu-18.04.3-desktop-amd64; minimal install; student/student
 
