@@ -57,6 +57,8 @@ function run_install {
     # Setup keyboard input sources
     gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'cz'), ('xkb', 'us')]"
 
+    chown -R student:student /home/student
+
     # Remove tracks
     rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
