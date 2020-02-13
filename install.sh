@@ -23,13 +23,13 @@ function run_install {
     apt update -q
     apt install -y openjdk-11-jdk ant maven
 
-    # Install Dotnet SDK 3.0
+    # Install Dotnet SDK 3.1
     wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
     dpkg -i packages-microsoft-prod.deb
     add-apt-repository -y universe
     apt install -y apt-transport-https 
     apt update
-    apt install -y dotnet-sdk-3.0
+    apt install -y dotnet-sdk-3.1
     append_line 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
 
     # Install GCC/G++
@@ -38,6 +38,7 @@ function run_install {
 
     # Install Python3
     apt install -y python3.6 python3-pip
+    pip3 install cython
 
     # Check installed core packages
     java --version
@@ -59,11 +60,10 @@ function run_install {
 
     chown -R student:student /home/student
 
-    # Remove tracks
     rm -f /root/.bash_history /home/student/.bash_history || true
     rm -rf /home/student/.ssh || true
 
-    echo 'Installation successfully completed'
+    echo 'Installation completed'
 }
 
 

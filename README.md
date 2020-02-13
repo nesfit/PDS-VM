@@ -5,9 +5,9 @@ OS: ubuntu-18.04.3-desktop-amd64; minimal install; student/student
 Installed core software:
 
 *	OpenJDK11
-*	Dotnet SDK 3.0
+*	Dotnet SDK 3.1
 *	gcc 7.3.0, g++ 7.3.0
-*	Python 3.6.7, Pip3 
+*	Python 3.6.7, Pip3, Cython
 *	git 2.17.1
 
 
