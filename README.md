@@ -1,15 +1,15 @@
-VirtualBox: 6.0.12
+VM info:
 
-OS: ubuntu-18.04.4-desktop-amd64; minimal install; student/student
+* OS: ubuntu-20.04.2.0-desktop-amd64
+* Installation: minimal
+* Login: student/student
 
-Installed core software:
+Installed software packages:
 
 *	OpenJDK11
 *	Dotnet SDK 3.1
-*	gcc 7.4.0, g++ 7.4.0
-*	Python 3.6.9, Pip3, Cython
-*	git 2.17.1
-
+*	GCC/G++ 9.3.0
+*	Python 3.8.5, Pip3, Cython
 
 Possible problems with solutions:
 

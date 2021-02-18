@@ -24,8 +24,8 @@ function run_install {
     apt install -y openjdk-11-jdk ant maven
 
     # Install Dotnet SDK 3.1
-    wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-    dpkg -i packages-microsoft-prod.deb
+    wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+    sudo dpkg -i packages-microsoft-prod.deb
     add-apt-repository -y universe
     apt install -y apt-transport-https 
     apt update
@@ -33,11 +33,10 @@ function run_install {
     append_line 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
 
     # Install GCC/G++
-    apt install -y gcc g++ build-essential \
-                   libssl-dev libpcap-dev libboost-dev
+    apt install -y gcc g++ build-essential libssl-dev libpcap-dev libboost-dev
 
     # Install Python3
-    apt install -y python3.6 python3-pip
+    apt install -y python3 python3-pip
     pip3 install cython
 
     # Check installed core packages
@@ -65,6 +64,5 @@ function run_install {
 
     echo 'Installation completed'
 }
-
 
 (cd /tmp; run_install)
