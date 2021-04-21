@@ -33,7 +33,7 @@ function run_install {
     append_line 'DOTNET_CLI_TELEMETRY_OPTOUT=1' /etc/environment
 
     # Install GCC/G++
-    apt install -y gcc g++ build-essential libssl-dev libpcap-dev libboost-dev
+    apt install -y gcc g++ build-essential libssl-dev libpcap-dev libboost-dev libnet1-dev
 
     # Install Python3
     apt install -y python3 python3-pip
